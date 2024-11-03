@@ -1,9 +1,10 @@
 package ee.ivkhkdev.services;
 
-import ee.ivkhkdev.helpers.AppHelper;
-import ee.ivkhkdev.helpers.AppHelperCompany;
+import ee.ivkhkdev.interfaces.AppHelper;
+import ee.ivkhkdev.helpers.CompanyAppHelper;
+import ee.ivkhkdev.interfaces.Service;
 import ee.ivkhkdev.model.Company;
-import ee.ivkhkdev.repository.Repository;
+import ee.ivkhkdev.interfaces.Repository;
 import ee.ivkhkdev.repository.Storage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -29,7 +30,7 @@ class CompanyServiceTest {
         Company company = new Company("ASUS");
         companies = new ArrayList<>();
         companies.add(company);
-        appHelperCompanyMock = Mockito.mock(AppHelperCompany.class);
+        appHelperCompanyMock = Mockito.mock(CompanyAppHelper.class);
         when(appHelperCompanyMock.create()).thenReturn(new Company("Acer"));
         repositoryMock = Mockito.mock(Storage.class);
         companyService = new CompanyService(companies, appHelperCompanyMock, repositoryMock);

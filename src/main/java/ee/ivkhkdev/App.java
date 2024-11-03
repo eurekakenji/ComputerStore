@@ -1,15 +1,17 @@
 package ee.ivkhkdev;
 
 import ee.ivkhkdev.helpers.*;
-import ee.ivkhkdev.input.Input;
+import ee.ivkhkdev.interfaces.Input;
 import ee.ivkhkdev.input.ConsoleInput;
+import ee.ivkhkdev.interfaces.AppHelper;
 import ee.ivkhkdev.model.Company;
 import ee.ivkhkdev.model.Computer;
 import ee.ivkhkdev.model.User;
-import ee.ivkhkdev.repository.Repository;
+import ee.ivkhkdev.interfaces.Repository;
 import ee.ivkhkdev.services.CompanyService;
 import ee.ivkhkdev.services.ComputerService;
-import ee.ivkhkdev.services.Service;
+import ee.ivkhkdev.interfaces.Service;
+import ee.ivkhkdev.services.PurchaseHistoryService;
 import ee.ivkhkdev.services.UserService;
 import ee.ivkhkdev.repository.Storage;
 import java.util.List;
@@ -42,12 +44,12 @@ public class App {
         this.computers = this.computerRepository.load();
         this.input = new ConsoleInput(new Scanner(System.in));
 
-        appHelperUser = new AppHelperUser(input);
-        appHelperCompany = new AppHelperCompany(input);
+        appHelperUser = new UserAppHelper(input);
+        appHelperCompany = new CompanyAppHelper(input);
 
         userService = new UserService(users,appHelperUser,userRepository);
         companyService = new CompanyService(companies,appHelperCompany,companyRepository);
-        appHelperComputer = new AppHelperComputer(input,companyService);
+        appHelperComputer = new ComputerAppHelper(input,companyService);
         computerService = new ComputerService(computers,appHelperComputer,computerRepository);
     }
 
@@ -62,6 +64,8 @@ public class App {
             System.out.println("3. Add computer");
             System.out.println("4. List of computers");
             System.out.println("5. Add company");
+            System.out.println("6. Buy computer");
+            System.out.println("7. Purchase history");
             System.out.print("Enter task number: ");
             int task = Integer.parseInt(input.nextLine()); // Используем input
             switch (task) {
@@ -106,6 +110,17 @@ public class App {
                 default:
                     System.out.println("Pick a number from the list!");
                     break;
+
+                case 6:
+                    System.out.println("Buy computer");
+                    if(PurchaseHistoryService.add()){
+                        System.out.println("Computer bought");
+                    }else{
+                        System.out.println("Unble to confirm purchase");
+                    };
+                    break;
+
+
             }
             System.out.println("==============================");
         } while (repeat);

@@ -1,12 +1,13 @@
 package ee.ivkhkdev.services;
 
-import ee.ivkhkdev.helpers.AppHelper;
+import ee.ivkhkdev.interfaces.AppHelper;
+import ee.ivkhkdev.interfaces.Service;
 import ee.ivkhkdev.model.Company;
-import ee.ivkhkdev.repository.Repository;
+import ee.ivkhkdev.interfaces.Repository;
 
 import java.util.List;
 
-public class CompanyService implements Service{
+public class CompanyService implements Service {
 
     private final List <Company> companies;
     private Repository <Company> repository;

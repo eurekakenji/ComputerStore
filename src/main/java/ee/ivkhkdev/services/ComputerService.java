@@ -1,26 +1,27 @@
 package ee.ivkhkdev.services;
 
-import ee.ivkhkdev.helpers.AppHelper;
+import ee.ivkhkdev.interfaces.AppHelper;
+import ee.ivkhkdev.interfaces.Service;
 import ee.ivkhkdev.model.Computer;
-import ee.ivkhkdev.repository.Repository;
+import ee.ivkhkdev.interfaces.Repository;
 
 
 import java.util.List;
 
-public class ComputerService implements Service{
+public class ComputerService implements Service {
 
     private final List<Computer> computers;
     private Repository<Computer> repository;
-    private AppHelper <Computer> appHelperComputer;
+    private AppHelper <Computer> computerAppHelper;
 
-    public ComputerService(List<Computer> computers, AppHelper appHelperBook, Repository<Computer> repository) {
+    public ComputerService(List<Computer> computers, AppHelper computerAppHelper, Repository<Computer> repository) {
         this.computers = computers;
-        this.appHelperComputer = appHelperBook;
+        this.computerAppHelper = computerAppHelper;
         this.repository = repository;
     }
     public boolean add(){
         try {
-            Computer book = appHelperComputer.create();
+            Computer book = computerAppHelper.create();
             if(book == null) return false;
             for (int i = 0; i <= computers.size(); i++){
                 if(i == 0 ){
@@ -43,11 +44,11 @@ public class ComputerService implements Service{
 
     @Override
     public boolean print() {
-        return appHelperComputer.printList(computers);
+        return computerAppHelper.printList(computers);
     }
 
     @Override
-    public List list() {
+    public List<Computer> list() {
         return computers;
     }
 

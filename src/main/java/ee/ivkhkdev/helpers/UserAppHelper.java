@@ -1,15 +1,16 @@
 package ee.ivkhkdev.helpers;
 
-import ee.ivkhkdev.input.Input;
+import ee.ivkhkdev.interfaces.Input;
+import ee.ivkhkdev.interfaces.AppHelper;
 import ee.ivkhkdev.model.User;
 
 import java.util.List;
 
-public class AppHelperUser implements AppHelper<User> {
+public class UserAppHelper implements AppHelper<User> {
     private final Input input;
 
 
-    public AppHelperUser(Input input) {
+    public UserAppHelper(Input input) {
         this.input = input;
 
     }

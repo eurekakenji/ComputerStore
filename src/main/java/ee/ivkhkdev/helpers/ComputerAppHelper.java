@@ -1,18 +1,19 @@
 package ee.ivkhkdev.helpers;
 
-import ee.ivkhkdev.input.Input;
+import ee.ivkhkdev.interfaces.Input;
+import ee.ivkhkdev.interfaces.AppHelper;
 import ee.ivkhkdev.model.Company;
 import ee.ivkhkdev.model.Computer;
-import ee.ivkhkdev.services.Service;
+import ee.ivkhkdev.interfaces.Service;
 
 import java.util.List;
 
-public class AppHelperComputer implements AppHelper<Computer> {
+public class ComputerAppHelper implements AppHelper<Computer> {
 
     private final Input input;
     private final Service<Company> companyService;
 
-    public AppHelperComputer(Input input, Service<Company> companyService) {
+    public ComputerAppHelper(Input input, Service<Company> companyService) {
         this.input = input;
         this.companyService = companyService;
     }

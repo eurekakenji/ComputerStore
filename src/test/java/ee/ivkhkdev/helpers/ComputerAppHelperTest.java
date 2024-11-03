@@ -1,9 +1,10 @@
 package ee.ivkhkdev.helpers;
 
-import ee.ivkhkdev.input.Input;
+import ee.ivkhkdev.interfaces.Input;
+import ee.ivkhkdev.interfaces.AppHelper;
 import ee.ivkhkdev.model.Company;
 import ee.ivkhkdev.model.Computer;
-import ee.ivkhkdev.services.Service;
+import ee.ivkhkdev.interfaces.Service;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,7 +18,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
-class AppHelperComputerTest {
+class ComputerAppHelperTest {
     Input inputMock;
     AppHelper<Computer> appHelperComputer;
     Service<Company> companyServiceMock;
@@ -28,7 +29,7 @@ class AppHelperComputerTest {
     void setUp() {
         inputMock = Mockito.mock(Input.class);
         companyServiceMock = Mockito.mock(Service.class);
-        appHelperComputer = new AppHelperComputer(inputMock, companyServiceMock);
+        appHelperComputer = new ComputerAppHelper(inputMock, companyServiceMock);
         outMock = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outMock));
 
