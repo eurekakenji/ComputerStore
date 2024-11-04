@@ -8,13 +8,11 @@ import ee.ivkhkdev.interfaces.Repository;
 import java.util.List;
 
 public class CompanyService implements Service {
-
-    private final List <Company> companies;
+    ;
     private Repository <Company> repository;
     private AppHelper <Company> appHelperCompany;
 
-    public CompanyService(List<Company> authors, AppHelper appHelperCompany, Repository<Company> repository) {
-        this.companies = authors;
+    public CompanyService(AppHelper<Company> appHelperCompany, Repository<Company> repository) {
         this.appHelperCompany = appHelperCompany;
         this.repository = repository;
     }
@@ -22,18 +20,8 @@ public class CompanyService implements Service {
     public boolean add(){
         Company company = appHelperCompany.create();
         if(company == null) return false;
-        try {
-            for (int i = 0; i <= companies.size(); i++){
-                if(i == 0 ){
-                    companies.add(company);
-                    repository.save(company);
-                    break;
-                }else if(companies.get(i) == null){
-                    companies.add(company);
-                    repository.save(company);
-                    break;
-                }
-            }
+        try{
+            repository.save(company);
             return true;
         }catch (Exception e){
             System.out.println("Error: "+e.toString());
@@ -49,10 +37,10 @@ public class CompanyService implements Service {
 
     @Override
     public boolean printList() {
-        return appHelperCompany.printList(companies);
+        return appHelperCompany.printList(repository.load());
     }
 
     public List<Company> list() {
-        return companies;
+        return repository.load();
     }
 }

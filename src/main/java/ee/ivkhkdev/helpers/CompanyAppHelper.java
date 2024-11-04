@@ -35,7 +35,7 @@ public class CompanyAppHelper implements AppHelper<Company> {
         try {
             if(companies.size() < 1) return false;
             for(int i = 0; i < companies.size(); i++){
-                System.out.printf("%d. %s %s%n", i+1,companies.get(i).getName());
+                System.out.printf("%d. %s%n", i+1,companies.get(i).getName());
             }
             return true;
         }catch (Exception e){

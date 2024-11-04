@@ -77,6 +77,8 @@ class ComputerAppHelperTest {
         computers.add(expected);
         appHelperComputer.printList(computers);
         String out = outMock.toString();
+        System.setOut(defaultOut);
+        System.out.println(outMock.toString());
         String expect = "TUF Gaming A15. ASUS. 2023";
         assertTrue(out.contains(expect));
 

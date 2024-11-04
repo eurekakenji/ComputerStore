@@ -10,30 +10,18 @@ import java.util.List;
 
 public class ComputerService implements Service {
 
-    private final List<Computer> computers;
     private Repository<Computer> repository;
     private AppHelper <Computer> computerAppHelper;
 
-    public ComputerService(List<Computer> computers, AppHelper computerAppHelper, Repository<Computer> repository) {
-        this.computers = computers;
+    public ComputerService(AppHelper<Computer> computerAppHelper, Repository<Computer> repository) {
         this.computerAppHelper = computerAppHelper;
         this.repository = repository;
     }
     public boolean add(){
         try {
-            Computer book = computerAppHelper.create();
-            if(book == null) return false;
-            for (int i = 0; i <= computers.size(); i++){
-                if(i == 0 ){
-                    computers.add(book);
-                    repository.save(book);
-                    break;
-                }else if(computers.get(i) == null){
-                    computers.add(book);
-                    repository.save(book);
-                    break;
-                }
-            }
+            Computer computer = computerAppHelper.create();
+            if (computer == null) return false;
+            repository.save(computer);
             return true;
         }catch (Exception e){
             System.out.println("Error: "+e.toString());
@@ -44,16 +32,16 @@ public class ComputerService implements Service {
 
     @Override
     public boolean print() {
-        return computerAppHelper.printList(computers);
-    }
-
-    @Override
-    public List<Computer> list() {
-        return computers;
+        return computerAppHelper.printList(repository.load());
     }
 
     @Override
     public boolean printList() {
         return false;
+    }
+
+    @Override
+    public List list() {
+        return repository.load();
     }
 }

@@ -58,7 +58,7 @@ public class ComputerAppHelper implements AppHelper<Computer> {
                 StringBuilder sbCompanies = new StringBuilder();
                 for (int j = 0; j < computers.get(i).getCompanies().size(); j++) {
                     sbCompanies.append(computers.get(i).getCompanies().get(j).getName());
-                    sbCompanies.append(" . ");
+                    sbCompanies.append(". ");
                 }
                 System.out.printf("%d. %s. %s%d%n", i+1,computers.get(i).getModel(),sbCompanies.toString(),computers.get(i).getReleaseYear());
             }

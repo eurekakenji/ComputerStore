@@ -36,12 +36,13 @@ public class PurchaseHistoryService implements Service<PurchaseHistory> {
     }
 
     @Override
-    public boolean printList() {
-        return false;
-    }
-
-    @Override
     public List<PurchaseHistory> list() {
         return repository.load();
     }
+
+    @Override
+    public boolean printList() {
+        return false;
+    }
 }
+

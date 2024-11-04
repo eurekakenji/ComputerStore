@@ -49,7 +49,7 @@ public class PurchaseHistoryAppHelper implements AppHelper<PurchaseHistory> {
         for (int i = 0; i < purchaseHistories.size(); i++) {
             PurchaseHistory purchaseHistory= purchaseHistories.get(i);
             if (purchaseHistory.getPurchases() == null) {
-                System.out.printf("%d. %s. %s. Bought %s %s%n",
+                System.out.printf("%d. %s. %s. Bought by %s %s%n",
                         i + 1,
                         purchaseHistory.getComputer().getModel(),
                         purchaseHistory.getComputer().getReleaseYear(),

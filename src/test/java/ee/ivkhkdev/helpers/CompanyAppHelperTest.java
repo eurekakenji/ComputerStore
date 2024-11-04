@@ -50,10 +50,10 @@ class CompanyAppHelperTest {
 
     @Test
     void printList() {
-        Company author = new Company("ASUS");
-        List<Company> authors = new ArrayList<>();
-        authors.add(author);
-        boolean result = companyAppHelper.printList(authors);
+        Company company = new Company("ASUS");
+        List<Company> companies = new ArrayList<>();
+        companies.add(company);
+        boolean result = companyAppHelper.printList(companies);
         boolean expected = true;
         assertTrue(result);
         String expectedString = "1. ASUS";

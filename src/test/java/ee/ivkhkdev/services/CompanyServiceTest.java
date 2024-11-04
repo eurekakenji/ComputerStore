@@ -33,7 +33,7 @@ class CompanyServiceTest {
         appHelperCompanyMock = Mockito.mock(CompanyAppHelper.class);
         when(appHelperCompanyMock.create()).thenReturn(new Company("Acer"));
         repositoryMock = Mockito.mock(Storage.class);
-        companyService = new CompanyService(companies, appHelperCompanyMock, repositoryMock);
+        companyService = new CompanyService(appHelperCompanyMock, repositoryMock);
     }
 
     @AfterEach

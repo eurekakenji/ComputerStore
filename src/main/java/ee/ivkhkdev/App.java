@@ -6,6 +6,7 @@ import ee.ivkhkdev.input.ConsoleInput;
 import ee.ivkhkdev.interfaces.AppHelper;
 import ee.ivkhkdev.model.Company;
 import ee.ivkhkdev.model.Computer;
+import ee.ivkhkdev.model.PurchaseHistory;
 import ee.ivkhkdev.model.User;
 import ee.ivkhkdev.interfaces.Repository;
 import ee.ivkhkdev.services.CompanyService;
@@ -18,39 +19,21 @@ import java.util.List;
 import java.util.Scanner;
 
 public class App {
+    private final Service<PurchaseHistory> purchaseHistoryService;
     private Input input;
-    public List<User> users;
-    public List<Computer> computers;
-    public List<Company> companies;
-
-    private AppHelper appHelperCompany;
-    private AppHelper appHelperComputer;
-    private AppHelper appHelperUser;
-    private Repository<Company> companyRepository;
-    private Repository<User> userRepository;
-    private Repository<Computer> computerRepository;
-    private Service <User> userService;
-    private Service <Computer> computerService;
-    private Service <Company> companyService;
+    private Service<User> userService;
+    private Service<Computer> computerService;
+    private Service<Company> companyService;
 
 
-    public App() {
-        userRepository = new Storage<User>("users");
-        computerRepository = new Storage<Computer>("computers");
-        companyRepository = new Storage<Company>("companies");
 
-        this.users = this.userRepository.load();
-        this.companies = this.companyRepository.load();
-        this.computers = this.computerRepository.load();
-        this.input = new ConsoleInput(new Scanner(System.in));
+    public App(Input input, Service<Computer> computerService, Service<User> userService, Service<Company> companyService, Service<PurchaseHistory> purchaseHistoryService) {
+        this.input = input;
+        this.computerService = computerService;
+        this.userService = userService;
+        this.companyService = companyService;
+        this.purchaseHistoryService = purchaseHistoryService;
 
-        appHelperUser = new UserAppHelper(input);
-        appHelperCompany = new CompanyAppHelper(input);
-
-        userService = new UserService(users,appHelperUser,userRepository);
-        companyService = new CompanyService(companies,appHelperCompany,companyRepository);
-        appHelperComputer = new ComputerAppHelper(input,companyService);
-        computerService = new ComputerService(computers,appHelperComputer,computerRepository);
     }
 
     public void run() {
@@ -67,7 +50,7 @@ public class App {
             System.out.println("6. Buy computer");
             System.out.println("7. Purchase history");
             System.out.print("Enter task number: ");
-            int task = Integer.parseInt(input.nextLine()); // Используем input
+            int task = Integer.parseInt(input.nextLine());
             switch (task) {
                 case 0:
                     System.out.println("exiting program...");
@@ -113,13 +96,16 @@ public class App {
 
                 case 6:
                     System.out.println("Buy computer");
-                    if(PurchaseHistoryService.add()){
+                    if(purchaseHistoryService.add()){
                         System.out.println("Computer bought");
                     }else{
-                        System.out.println("Unble to confirm purchase");
-                    };
+                        System.out.println("Unable to confirm purchase");
+                    }
                     break;
-
+                case 7:
+                    if(purchaseHistoryService.print()){
+                        System.out.println("----------- end of list -----------");
+                    }
 
             }
             System.out.println("==============================");
