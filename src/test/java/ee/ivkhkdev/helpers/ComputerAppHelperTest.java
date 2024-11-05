@@ -83,4 +83,18 @@ class ComputerAppHelperTest {
         assertTrue(out.contains(expect));
 
     }
+    @Test
+    public void testEditSuccessful() {
+        List<Company> companiesMock= List.of(new Company("ASUS"), new Company("Acer"));
+        List<Computer> computersMock = List.of(new Computer("TUF Gaming A15", companiesMock, 2023));
+        when(inputMock.nextLine()).thenReturn("1", "y", "Extensa 15", "y","n","1","2","y", "2022");
+        List<Computer> result= appHelperComputer.edit(computersMock);
+        assertEquals(result.get(0).getModel(),"Extensa 15");
+    }
+
+    @Test
+    public void testEditUnsuccessful() {
+        List<Computer> result = appHelperComputer.edit(null);
+        assertEquals(result, null);
+    }
 }

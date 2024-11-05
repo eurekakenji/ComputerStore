@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 import ee.ivkhkdev.interfaces.AppHelper;
+import ee.ivkhkdev.model.Computer;
 import ee.ivkhkdev.model.User;
 import ee.ivkhkdev.interfaces.Repository;
 import org.junit.jupiter.api.BeforeEach;
@@ -69,5 +70,20 @@ public class UserServiceTest {
         List<User> result = userService.list();
         assertEquals(mockUserList, result);
         verify(mockRepository, times(1)).load();
+    }
+    @Test
+    public void testEditSuccessful() {
+            List<User> usersMock= List.of(new User(), new User());
+        when(mockAppHelperUser.edit(usersMock)).thenReturn(usersMock);
+        boolean result = userService.edit();
+        assertTrue(result);
+    }
+
+    @Test
+    public void testEditUnsuccessful() {
+        List<User> usersMock= List.of(new User(), new User());
+        when(mockAppHelperUser.edit(usersMock)).thenReturn(null);
+        boolean result = userService.edit();
+        assertFalse(result);
     }
 }

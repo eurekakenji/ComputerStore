@@ -9,4 +9,6 @@ public interface Service<T> {
     boolean printList();
 
     List<T> list();
+
+    boolean edit();
 }

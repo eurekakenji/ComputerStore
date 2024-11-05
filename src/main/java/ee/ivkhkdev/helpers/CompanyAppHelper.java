@@ -43,4 +43,9 @@ public class CompanyAppHelper implements AppHelper<Company> {
             return false;
         }
     }
+
+    @Override
+    public List<Company> edit(List<Company> load) {
+        return List.of();
+    }
 }

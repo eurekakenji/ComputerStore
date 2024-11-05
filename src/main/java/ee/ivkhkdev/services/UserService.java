@@ -2,6 +2,7 @@ package ee.ivkhkdev.services;
 
 import ee.ivkhkdev.interfaces.AppHelper;
 import ee.ivkhkdev.interfaces.Service;
+import ee.ivkhkdev.model.Computer;
 import ee.ivkhkdev.model.User;
 import ee.ivkhkdev.interfaces.Repository;
 
@@ -42,4 +43,13 @@ public class UserService implements Service {
     public List list() {
         return repository.load();
     }
+    @Override
+    public boolean edit(){
+        List<User> modifiedUsers = appHelperUser.edit(repository.load());
+        if (modifiedUsers == null) {
+        return false;
+    }
+        repository.saveAll(modifiedUsers);
+        return true;
+}
 }

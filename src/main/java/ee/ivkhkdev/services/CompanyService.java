@@ -43,4 +43,9 @@ public class CompanyService implements Service {
     public List<Company> list() {
         return repository.load();
     }
+
+    @Override
+    public boolean edit() {
+        return false;
+    }
 }

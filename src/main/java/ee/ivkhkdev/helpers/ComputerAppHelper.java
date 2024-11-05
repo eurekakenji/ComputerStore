@@ -68,4 +68,9 @@ public class ComputerAppHelper implements AppHelper<Computer> {
             return false;
         }
     }
+
+    @Override
+    public List<Computer> edit(List<Computer> load) {
+        return List.of();
+    }
 }

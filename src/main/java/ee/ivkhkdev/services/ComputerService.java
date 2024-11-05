@@ -44,4 +44,14 @@ public class ComputerService implements Service {
     public List list() {
         return repository.load();
     }
+
+    @Override
+    public boolean edit(){
+        List<Computer> modifiedComputers = computerAppHelper.edit(repository.load());
+        if (modifiedComputers == null) {
+            return false;
+        }
+        repository.saveAll(modifiedComputers);
+        return true;
+    }
 }

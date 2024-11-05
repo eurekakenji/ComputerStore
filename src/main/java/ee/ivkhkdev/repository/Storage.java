@@ -53,4 +53,9 @@ public class Storage<T> implements Repository<T> {
         }
         return new ArrayList<>();
     }
+
+    @Override
+    public void saveAll(List<T> modifiedComputers) {
+
+    }
 }

@@ -83,4 +83,19 @@ class ComputerServiceTest {
         assertEquals(mockComputerList, result);
         verify(repositry,times(1)).load();
     }
+    @Test
+    public void testEditSuccessful() {
+        List<Computer> computersMock= List.of(new Computer(), new Computer());
+        when(appHelperComputer.edit(computersMock)).thenReturn(computersMock);
+        boolean result = computerService.edit();
+        assertTrue(result);
+    }
+
+    @Test
+    public void testEditUnsuccessful() {
+        List<Computer> computersMock= List.of(new Computer(), new Computer());
+        when(appHelperComputer.edit(computersMock)).thenReturn(null);
+        boolean result = computerService.edit();
+        assertFalse(result);
+    }
 }

@@ -41,6 +41,11 @@ public class PurchaseHistoryService implements Service<PurchaseHistory> {
     }
 
     @Override
+    public boolean edit() {
+        return false;
+    }
+
+    @Override
     public boolean printList() {
         return false;
     }

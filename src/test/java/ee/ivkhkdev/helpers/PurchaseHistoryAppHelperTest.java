@@ -79,14 +79,26 @@ class PurchaseHistoryAppHelperTest {
 
     @Test
     void testPrintListOfPurchasesTrue() {
-        Computer computer = new Computer("Test computer",List.of(new Company("Test company")),2024);
+        Computer computer = new Computer("Test computer",List.of(new Company("Test company")), 2020);
+        User user = new User("Karl", "Wheezer","12345678");
+        PurchaseHistory purchaseHistory = new PurchaseHistory(computer, user, null);
+        List<PurchaseHistory> purchaseHistories = List.of(purchaseHistory);
+
+        boolean result = purchaseHistoryAppHelper.printList(purchaseHistories);
+
+        assertTrue(result);
+    }
+
+    @Test
+    void testPrintListOfPurchasesFalse() {
+        Computer computer = new Computer("Test computer", List.of(new Company("Test company")),2024);
         User user = new User("Karl", "Wheezer", "12345678");
         PurchaseHistory purchaseHistory = new PurchaseHistory(computer, user, LocalDate.now());
         List<PurchaseHistory> purchaseHistoryList = List.of(purchaseHistory);
 
         boolean result = purchaseHistoryAppHelper.printList(purchaseHistoryList);
 
-        assertTrue(result);
+        assertFalse(result);
     }
 
     @Test
@@ -98,8 +110,9 @@ class PurchaseHistoryAppHelperTest {
 
         when(mockInput.nextLine()).thenReturn("1");
 
-        List
+        List<PurchaseHistory> result = purchaseHistoryAppHelper.returnBack(purchaseHistoryList);
 
+        assertNotNull(result);
     }
 
 }

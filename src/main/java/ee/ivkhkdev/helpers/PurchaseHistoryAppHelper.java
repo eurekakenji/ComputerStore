@@ -65,4 +65,13 @@ public class PurchaseHistoryAppHelper implements AppHelper<PurchaseHistory> {
             return false;
         }
     }
+
+    @Override
+    public List<PurchaseHistory> edit(List<PurchaseHistory> load) {
+        return List.of();
+    }
+
+    public List<PurchaseHistory> returnBack(List<PurchaseHistory> purchaseHistoryList) {
+        return purchaseHistoryList;
+    }
 }

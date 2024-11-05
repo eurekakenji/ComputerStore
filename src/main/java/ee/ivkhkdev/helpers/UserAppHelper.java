@@ -49,4 +49,9 @@ public class UserAppHelper implements AppHelper<User> {
             return false;
         }
     }
+
+    @Override
+    public List<User> edit(List<User> load) {
+        return List.of();
+    }
 }

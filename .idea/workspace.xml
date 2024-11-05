@@ -5,24 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7335ae19-422a-43cf-b456-933d8d9326d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ee/ivkhkdev/helpers/PurchaseHistoryAppHelperTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ee/ivkhkdev/services/ComputerServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ee/ivkhkdev/services/PurchaseHistoryServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ee/ivkhkdev/services/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/helpers/CompanyAppHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/helpers/CompanyAppHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/helpers/ComputerAppHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/helpers/ComputerAppHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/helpers/PurchaseHistoryAppHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/helpers/PurchaseHistoryAppHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/helpers/UserAppHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/helpers/UserAppHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/interfaces/AppHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/interfaces/AppHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/interfaces/Repository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/interfaces/Repository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/interfaces/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/interfaces/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/repository/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/repository/Storage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/services/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/services/CompanyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/services/ComputerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/services/ComputerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/services/PurchaseHistoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/services/PurchaseHistoryService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ee/ivkhkdev/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ee/ivkhkdev/helpers/CompanyAppHelperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ee/ivkhkdev/helpers/CompanyAppHelperTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ee/ivkhkdev/helpers/ComputerAppHelperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ee/ivkhkdev/helpers/ComputerAppHelperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ee/ivkhkdev/services/CompanyServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ee/ivkhkdev/services/CompanyServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ee/ivkhkdev/helpers/PurchaseHistoryAppHelperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ee/ivkhkdev/helpers/PurchaseHistoryAppHelperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ee/ivkhkdev/services/ComputerServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ee/ivkhkdev/services/ComputerServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ee/ivkhkdev/services/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ee/ivkhkdev/services/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,12 +75,18 @@
     "JUnit.CompanyAppHelperTest.printList.executor": "Run",
     "JUnit.ComputerAppHelperTest.executor": "Run",
     "JUnit.ComputerAppHelperTest.printList.executor": "Run",
+    "JUnit.ComputerAppHelperTest.testEditSuccessful.executor": "Run",
+    "JUnit.ComputerAppHelperTest.testEditUnsuccessful.executor": "Run",
     "JUnit.ComputerServiceTest.executor": "Run",
+    "JUnit.ComputerServiceTest.testEditSuccessful.executor": "Run",
+    "JUnit.ComputerServiceTest.testEditUnsuccessful.executor": "Run",
     "JUnit.PurchaseHistoryAppHelperTest.executor": "Run",
     "JUnit.PurchaseHistoryAppHelperTest.testPrintListOfPurchases.executor": "Debug",
+    "JUnit.PurchaseHistoryAppHelperTest.testPrintListOfPurchasesTrue.executor": "Run",
     "JUnit.PurchaseHistoryServiceTest.executor": "Run",
     "JUnit.UserAppHelperTest.executor": "Run",
     "JUnit.UserServiceTest.executor": "Run",
+    "JUnit.UserServiceTest.testEditUnsuccessful.executor": "Run",
     "JUnit.ee.ivkhkdev.helpers in ComputerStore.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -87,13 +94,17 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/pupil/IdeaProjects/ComputerStore",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/Aries/IdeaProjects/ComputerStore/src/main/java/ee/ivkhkdev/Main.java",
-    "settings.editor.selected.configurable": "preferences.editor",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "Debugger_Data_Views_Java",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -106,8 +117,40 @@
       <recent name="ee.ivkhkdev.services" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PurchaseHistoryAppHelperTest.testPrintListOfPurchases">
-    <configuration name="ComputerServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ComputerAppHelperTest.testEditUnsuccessful">
+    <configuration name="ComputerAppHelperTest.testEditSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ComputerStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ee.ivkhkdev.helpers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ee.ivkhkdev.helpers" />
+      <option name="MAIN_CLASS_NAME" value="ee.ivkhkdev.helpers.ComputerAppHelperTest" />
+      <option name="METHOD_NAME" value="testEditSuccessful" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComputerAppHelperTest.testEditUnsuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ComputerStore" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ee.ivkhkdev.helpers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ee.ivkhkdev.helpers" />
+      <option name="MAIN_CLASS_NAME" value="ee.ivkhkdev.helpers.ComputerAppHelperTest" />
+      <option name="METHOD_NAME" value="testEditUnsuccessful" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComputerServiceTest.testEditSuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ComputerStore" />
       <extension name="coverage">
         <pattern>
@@ -117,43 +160,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="ee.ivkhkdev.services" />
       <option name="MAIN_CLASS_NAME" value="ee.ivkhkdev.services.ComputerServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PurchaseHistoryAppHelperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ComputerStore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ee.ivkhkdev.helpers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ee.ivkhkdev.helpers" />
-      <option name="MAIN_CLASS_NAME" value="ee.ivkhkdev.helpers.PurchaseHistoryAppHelperTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PurchaseHistoryAppHelperTest.testPrintListOfPurchases" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ComputerStore" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ee.ivkhkdev.helpers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ee.ivkhkdev.helpers" />
-      <option name="MAIN_CLASS_NAME" value="ee.ivkhkdev.helpers.PurchaseHistoryAppHelperTest" />
-      <option name="METHOD_NAME" value="testPrintListOfPurchases" />
+      <option name="METHOD_NAME" value="testEditSuccessful" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PurchaseHistoryServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ComputerServiceTest.testEditUnsuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ComputerStore" />
       <extension name="coverage">
         <pattern>
@@ -162,13 +175,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ee.ivkhkdev.services" />
-      <option name="MAIN_CLASS_NAME" value="ee.ivkhkdev.services.PurchaseHistoryServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="ee.ivkhkdev.services.ComputerServiceTest" />
+      <option name="METHOD_NAME" value="testEditUnsuccessful" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserServiceTest.testEditUnsuccessful" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ComputerStore" />
       <extension name="coverage">
         <pattern>
@@ -178,18 +192,19 @@
       </extension>
       <option name="PACKAGE_NAME" value="ee.ivkhkdev.services" />
       <option name="MAIN_CLASS_NAME" value="ee.ivkhkdev.services.UserServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="testEditUnsuccessful" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PurchaseHistoryAppHelperTest.testPrintListOfPurchases" />
-        <item itemvalue="JUnit.PurchaseHistoryAppHelperTest" />
-        <item itemvalue="JUnit.PurchaseHistoryServiceTest" />
-        <item itemvalue="JUnit.UserServiceTest" />
-        <item itemvalue="JUnit.ComputerServiceTest" />
+        <item itemvalue="JUnit.ComputerAppHelperTest.testEditUnsuccessful" />
+        <item itemvalue="JUnit.ComputerAppHelperTest.testEditSuccessful" />
+        <item itemvalue="JUnit.UserServiceTest.testEditUnsuccessful" />
+        <item itemvalue="JUnit.ComputerServiceTest.testEditUnsuccessful" />
+        <item itemvalue="JUnit.ComputerServiceTest.testEditSuccessful" />
       </list>
     </recent_temporary>
   </component>
