@@ -74,7 +74,7 @@ public class PurchaseHistory implements Serializable {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("LibraryCard{");
+        final StringBuilder sb = new StringBuilder("PurchaseHistory{");
         sb.append("id=").append(id);
         sb.append(", computer=").append(computer);
         sb.append(", user=").append(user);

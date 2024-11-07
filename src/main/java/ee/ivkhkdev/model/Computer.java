@@ -32,7 +32,7 @@ public class Computer  implements Serializable {
         return companies;
     }
 
-    public void setAuthors(List<Company> companies) {
+    public void setCompanies(List<Company> companies) {
         this.companies = companies;
     }
 
@@ -72,7 +72,7 @@ public class Computer  implements Serializable {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Book{");
+        final StringBuilder sb = new StringBuilder("Computer{");
         sb.append("id=").append(id);
         sb.append(", model='").append(model).append('\'');
         sb.append(", companies=").append(Arrays.toString(companies.toArray()));

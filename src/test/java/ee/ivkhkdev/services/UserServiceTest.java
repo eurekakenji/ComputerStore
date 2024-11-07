@@ -73,7 +73,7 @@ public class UserServiceTest {
     }
     @Test
     public void testEditSuccessful() {
-            List<User> usersMock= List.of(new User(), new User());
+        List<User> usersMock= List.of(new User(), new User());
         when(mockAppHelperUser.edit(usersMock)).thenReturn(usersMock);
         boolean result = userService.edit();
         assertTrue(result);
